@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3g</title>
+</head>
+<body>
+   <div class="container"></div>
+
+    <script src="external-code/react.js"></script>
+    <script src="external-code/react-dom.js"></script>
+    <script src="external-code/babel.js"></script>
+
+    <script type="text/babel">
+
+      function App () {
+
+        // save state
+        const [inputText, setInputText] = React.useState('');
+
+            function saveInputText (event) {
+            setInputText(event.target.value);
+          }
+
+          function removeText(){
+          setInputText('');
+          }
+
+          function setExampleText(){
+          setInputText('Alice');
+          }
+
+          return (
+            <>
+              <input
+               onChange={saveInputText}
+                placeholder="Type something here" 
+                value={inputText}
+              />
+
+              <p>Hello {inputText} </p>
+              <button
+              onClick={removeText}
+              >Reset</button>
+              <button
+              onClick={setExampleText}
+              >Example</button>
+
+            </>
+          );
+          
+
+
+
+      }
+
+
+      const container = document.querySelector('.container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+</body>
+</html>

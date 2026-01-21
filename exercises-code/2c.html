@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="external-code/react.js"></script>
+    <script src="external-code/react-dom.js"></script>
+
+    <script src="external-code/babel.js"></script>
+    <script type="text/babel">
+        
+        function App() {
+          return (
+            <>
+              <p>hello, Welcome to my website</p>
+              <div>
+                <input type="Email" placeholder="Email" />
+              </div>
+              <div>
+                <input type="password" placeholder="password" />
+              </div>
+              <button>Login</button>
+              <button>Sign up</button>
+
+            </>
+          );
+        }
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

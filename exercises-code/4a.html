@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4a</title>
+
+    <style>
+        .on-button {
+            background-color: rgb(25, 135, 84);
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .of-button {
+            background-color: rgb(220, 53, 69);
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script src="external-code/react.js"></script>
+    <script src="external-code/react-dom.js"></script>
+    <script src="external-code/babel.js"></script>
+    
+    <script type="text/babel">
+
+        function App() {
+            const [isButtonOn, setIsButtonOn] = React.useState(true);
+            
+            function checkAction (){
+                if (isButtonOn) {
+                    setIsButtonOn(false);
+                } else {
+                    setIsButtonOn(true);
+                }
+
+            }
+
+            return (
+                <>
+                    <button
+                        className={isButtonOn === true ? 'on-button' : 'of-button'}
+                        onClick={checkAction}
+                    >{isButtonOn ? 'ON' : 'OFF' }</button>
+                </>
+            )
+        }
+        
+        
+        const container = document.querySelector('.container');
+        ReactDOM.createRoot(container).render(<App />)
+    </script>
+</body>
+</html>

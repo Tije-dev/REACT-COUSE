@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+   <div class="js-container"></div>
+
+   <script src="external-code/react.js"></script>
+   <script src="external-code/react-dom.js"></script>
+
+   <script src="external-code/babel.js"></script>
+
+  <script type="text/babel">
+
+    // using ReactUseState to save the counter value
+
+    function Counter ({count, setCount}) {
+
+            // const counter = React.useState(0);
+          // const count = counter[0];
+          // const setCount = counter[1];
+
+          function updateCounter () {
+            setCount(count + 1);
+          }
+
+          return  (
+          <>
+            <button onClick={updateCounter}>
+              Clicked {count} {count === 1 ? 'time' : 'Times'}
+            </button>           
+            <button onClick={() => setCount(0)}>
+              Resets
+            </button>
+          </>
+        );
+
+    }
+
+    function App () {
+
+      const [count, setCount] = React.useState(0);
+      return (
+        <>
+          <Counter
+           count={count}
+           setCount={setCount} 
+           />
+          <Counter
+           count={count}
+           setCount={setCount} 
+           />
+        </>
+      );
+
+   }
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(<App />);
+  </script>
+  </body>
+</html>
