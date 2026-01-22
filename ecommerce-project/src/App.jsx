@@ -1,9 +1,15 @@
+import { Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 
 import "./App.css";
 
 function App() {
-  return <HomePage />;
+  return (
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path="checkout" element={<div>hhcvfvvf</div>} />
+    </Routes>
+  );
 }
 
 export default App;
