@@ -38,6 +38,14 @@
   border: 1px solid white;
 }
 
+.header .header-link.active {
+  border-bottom: 3px solid white;
+}
+
+.header .left-section .header-link.active {
+  border-bottom: none;
+}
+
 .header .logo {
   height: 26px;
   margin-top: 1px;
