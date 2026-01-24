@@ -34,7 +34,7 @@ export function HomePage() {
                 </div>
 
                 <div className="product-price">
-                  ${(product.priceCents / 100).toFixed}
+                  ${(product.priceCents / 100).toFixed()}
                 </div>
 
                 <div className="product-quantity-container">
