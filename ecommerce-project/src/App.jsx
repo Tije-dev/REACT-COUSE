@@ -11,6 +11,7 @@ import { TrackingPage } from "./pages/TrackingPage";
 // import { useEffect } from "react";
 
 function App() {
+  // lift cart up And share it bettween pages
   const [cart, setCart] = useState([]);
   useEffect(() => {
     axios.get("/api/cart-items").then((response) => {
