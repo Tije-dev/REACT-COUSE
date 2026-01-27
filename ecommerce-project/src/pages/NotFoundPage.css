@@ -1,0 +1,41 @@
+.not-found-page {
+  max-width: 850px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.not-found-container {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.error-code {
+  font-size: 80px;
+  font-weight: 700;
+  color: rgb(25, 135, 84);
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.error-description {
+  font-size: 16px;
+  color: rgb(100, 100, 100);
+  margin-bottom: 40px;
+}
+
+.back-to-home-button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
